@@ -23,10 +23,11 @@ package cmd
 
 import (
 	"fmt"
+  "log"
 
 	"github.com/spf13/cobra"
   
-  "github.com/gstrand99/RESTWrench/wrench/requests"
+  requests "github.com/gstrand99/RESTWrench/wrench/requests"
 )
 
 // getCmd represents the get command
@@ -41,6 +42,13 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("get called")
+    url := args[0]
+    responseInfo, err := requests.Get(url)
+	  if err != nil {
+		  log.Fatal(err)
+	  }
+	  fmt.Println("GET request:")
+	  responseInfo.Print()
 	},
 }
 

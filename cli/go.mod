@@ -4,6 +4,7 @@ go 1.20
 
 require (
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
+	github.com/gstrand99/RESTWrench/wrench v0.0.0-20230803220320-e30a20428eea // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
