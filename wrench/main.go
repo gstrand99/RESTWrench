@@ -9,14 +9,14 @@ import (
 func main() {
 	url := "https://jsonplaceholder.typicode.com/posts/1"
 	url2 := "https://jsonplaceholder.typicode.com/posts"
-	responseInfo, err := wrench.Get(url)
+	responseInfo, err := requests.Get(url)
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Println("GET request:")
 	responseInfo.Print()
 
-	responseInfo, err = wrench.Delete(url)
+	responseInfo, err = requests.Delete(url)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -30,10 +30,10 @@ func main() {
 
   data := TestData{Title: "test", Body: "this is a test post"}
   
-  responseInfo, err = wrench.Post(url2, data)
+  responseInfo, err = requests.Post(url2, data)
   responseInfo.Print()
  
-  responseInfo, err = wrench.Put(url, data)
+  responseInfo, err = requests.Put(url, data)
   responseInfo.Print()
 
 }

@@ -1,4 +1,4 @@
-package wrench
+package requests
 
 import (
 	"bytes"
@@ -72,17 +72,19 @@ func Post(url string, body interface{}) (*ResponseInfo, error) {
 }
 
 func Put(url string, body interface{}) (*ResponseInfo, error) {
-  client := &http.Client{}
   jsonBody, err := json.Marshal(body)
   if err != nil {
     return nil, err 
   }
 
-  req, err := http.NewRequest("PUT", url, bytes.NewBuffer(jsonBody))
+  req, err := http.NewRequest(http.MethodPut, url, bytes.NewBuffer(jsonBody))
   if err != nil {
     return nil, err 
   }
-  
+
+  req.Header.Set("Content-Type", "application/json")
+
+  client := &http.Client{}
   resp, err := client.Do(req)
   if err != nil {
     return nil, err
