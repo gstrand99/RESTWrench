@@ -1,6 +1,0 @@
-[submodule "RESTWrench-go"]
-	path = RESTWrench-go
-	url = git@github.com:gstrand99/RESTWrench-go.git
-[submodule "RESTWrench-rust"]
-	path = RESTWrench-rust
-	url = git@github.com:gstrand99/RESTWrench-rust.git

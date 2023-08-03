@@ -36,3 +36,18 @@
 | Set: | ```$ wrench config set``` | |
 | Main: | ```$ wrench config``` | |
 
+
+### Structure
+```
+RESTWrench/
+├── wrench/         # Core functionality
+│   ├── crud/       # CRUD operations
+│   ├── config/     # Configuration management
+│   └── test/       # Test running
+├── tui/            # TUI interface
+│   └── main.go     # Entry point for the TUI application
+├── cli/            # CLI interface
+│   └── main.go     # Entry point for the CLI application
+└── nvim/           # Neovim plugin
+    └── main.lua    # Entry point for the Neovim plugin
+```
