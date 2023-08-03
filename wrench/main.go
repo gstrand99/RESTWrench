@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"github.com/gstrand99/RESTWrench/wrench/crud"
+	"github.com/gstrand99/RESTWrench/wrench/requests"
 )
 
 func main() {

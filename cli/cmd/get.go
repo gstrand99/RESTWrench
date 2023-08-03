@@ -26,7 +26,7 @@ import (
 
 	"github.com/spf13/cobra"
   
-  "github.com/gstrand99/RESTWrench/wrench/crud"
+  "github.com/gstrand99/RESTWrench/wrench/requests"
 )
 
 // getCmd represents the get command
